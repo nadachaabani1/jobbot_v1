@@ -1,0 +1,27 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+"-19" [class=ellipsis, label="..."];
+18 [class=active, fontsize=12, label=action_search_jobs];
+19 [class=active, fontsize=12, label=action_get_jobs];
+20 [class=active, fontsize=12, label=utter_goodbye];
+24 [class="intent dashed active", label="{'entities': [], 'intent': {'confidence': 0.8845201326905854, 'name': 'greet'}, 'intent_ranking': [{'confidence': 0.8845201326905854, 'name': 'greet'}, {'confidence': 0.06769547247938913, 'name': 'affirm'}, {'confidence': 0.02149924245298448, 'name': 'inform'}, {'confidence': 0.01515225727876246, 'name': 'thankyou'}, {'confidence': 0.004498881060287735, 'name': 'deny'}, {'confidence': 0.0044500175221978844, 'name': 'name'}, {'confidence': 0.0011537601184170622, 'name': 'newjoob'}, {'confidence': 0.0010302363973760215, 'name': 'request_info'}], 'text': 'bye'}", shape=rect];
+25 [class=intent, fillcolor=lightblue, label=greet, shape=rect, style=filled];
+26 [class="intent active", fillcolor=lightblue, label="i have masters degree and i am looking for web developer position with nosql skills", shape=rect, style=filled];
+27 [class="intent active", fillcolor=lightblue, label="thank you", shape=rect, style=filled];
+28 [class=intent, fillcolor=lightblue, label=greet, shape=rect, style=filled];
+29 [class="intent active", fillcolor=lightblue, label=bye, shape=rect, style=filled];
+0 -> 25  [class="", key=0];
+0 -> 26  [class=active, key=0];
+1 -> "-19"  [class="", key=NONE, label=""];
+18 -> 19  [class=active, key=NONE, label=""];
+19 -> 27  [class=active, key=0];
+20 -> 28  [class="", key=0];
+20 -> 29  [class=active, key=0];
+25 -> 1  [class="", key=0];
+26 -> 18  [class=active, key=0];
+27 -> 20  [class=active, key=0];
+28 -> "-1"  [class="", key=0];
+29 -> 24  [class=active, key=0];
+}
